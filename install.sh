@@ -50,4 +50,9 @@ $SUDO cp -R "$MNT/KCC.app" "$APP"
 # browser download left the flag on a previous copy, clear it too.
 $SUDO xattr -dr com.apple.quarantine "$APP" 2>/dev/null || true
 
-echo "✓ Installed. Launch from /Applications, or run: open -a KCC"
+if pgrep -x KCC >/dev/null 2>&1; then
+  echo "✓ Installed. KCC is still running the previous version —"
+  echo "  quit it (Cmd-Q) and reopen to use this one."
+else
+  echo "✓ Installed. Launch from /Applications, or run: open -a KCC"
+fi

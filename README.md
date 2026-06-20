@@ -22,3 +22,25 @@ old right-click → Open bypass is gone):
 ```bash
 xattr -dr com.apple.quarantine /Applications/KCC.app
 ```
+
+## Updating
+
+Re-run the **same** install command — it always grabs the latest release and replaces any
+existing `/Applications/KCC.app` in place, so there's no need to uninstall first:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/superkoh/kcc-releases/main/install.sh | bash
+```
+
+If KCC is open while you update, quit it (Cmd-Q) and reopen to start the new version. To
+check what you currently have installed:
+
+```bash
+defaults read /Applications/KCC.app/Contents/Info.plist CFBundleShortVersionString
+```
+
+## Uninstall
+
+```bash
+rm -rf /Applications/KCC.app
+```
