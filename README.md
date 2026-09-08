@@ -6,14 +6,15 @@ Claude sessions, and get a Workbench panel (changed files, file browser, web pag
 shell) beside each one. The source lives in a private repo; this repo only hosts the
 macOS arm64 installer so anyone can download it.
 
-Koloft was called **KCC** through v0.18; this repo keeps the old name in its URL until
-1.0. Upgrading from a KCC build keeps your settings, accounts and browser logins — the
-app carries them across on first launch, and the installer removes the old `KCC.app`.
+Koloft was called **KCC** through v0.18, and this repo was `kcc-releases`; the old URLs
+still redirect here, so older installs keep updating. Upgrading from a KCC build keeps
+your settings, accounts and browser logins — the app carries them across on first launch,
+and the installer removes the old `KCC.app`.
 
 ## Install (macOS, Apple Silicon)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/superkoh/kcc-releases/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/superkoh/koloft-releases/main/install.sh | bash
 ```
 
 This fetches the latest `.dmg` and installs `Koloft.app` into `/Applications`. The build
@@ -35,7 +36,7 @@ Re-run the **same** install command — it always grabs the latest release and r
 existing `/Applications/Koloft.app` in place, so there's no need to uninstall first:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/superkoh/kcc-releases/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/superkoh/koloft-releases/main/install.sh | bash
 ```
 
 If Koloft is open while you update, quit it (Cmd-Q) and reopen to start the new version.

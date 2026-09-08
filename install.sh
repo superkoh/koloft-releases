@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # One-line installer for Koloft (macOS arm64, unsigned personal build):
 #
-#   curl -fsSL https://raw.githubusercontent.com/superkoh/kcc-releases/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/superkoh/koloft-releases/main/install.sh | bash
 #
 # Why this exists: Koloft's .dmg is unsigned and un-notarized, so a *browser*
 # download gets the com.apple.quarantine attribute and Gatekeeper refuses to
@@ -16,9 +16,9 @@
 set -euo pipefail
 
 # Binaries live in a PUBLIC releases repo so anonymous downloaders aren't
-# blocked by the private source repo's 404. Source stays in superkoh/kcc.
-# (The repos keep the app's pre-1.0 name, KCC.)
-REPO="superkoh/kcc-releases"
+# blocked by the private source repo's 404. Source stays in superkoh/kcc (the
+# app's pre-1.0 name); the old kcc-releases URLs redirect here.
+REPO="superkoh/koloft-releases"
 APP_DIR="/Applications"
 # The app was called KCC through v0.18. A leftover KCC.app beside Koloft.app would
 # be two copies of one product, so installing the renamed app removes the old one.
