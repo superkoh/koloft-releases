@@ -15,9 +15,9 @@
 # glued onto the variable name in single-byte locales and break `set -u`.
 set -euo pipefail
 
-# Binaries live in a PUBLIC releases repo so anonymous downloaders aren't
-# blocked by the private source repo's 404. Source stays in superkoh/kcc (the
-# app's pre-1.0 name); the old kcc-releases URLs redirect here.
+# Binaries live in their own repo, apart from the source in superkoh/koloft, so the
+# release list stays nothing but installers. The old kcc / kcc-releases URLs redirect
+# to both.
 REPO="superkoh/koloft-releases"
 APP_DIR="/Applications"
 # The app was called KCC through v0.18. A leftover KCC.app beside Koloft.app would
